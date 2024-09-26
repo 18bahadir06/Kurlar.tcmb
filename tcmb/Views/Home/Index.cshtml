@@ -1,0 +1,76 @@
+﻿@*//@using tcmb.Models;*@
+@using tcmb.Controllers;
+@using System.Web.UI.WebControls;
+@*@model List<Tarih>*@
+
+
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<link rel="Stylesheet" type="text/css" href="~/tasarim.css"> <!--css dosyasına ulaşım için-->
+<header class="block-header2">
+</header>
+
+<form action="" method="post">
+    <p>
+        <input type="date" name="tarih" contextmenu="aaaa" min="2021-12-27" max="2024-12-31" />
+    </p>
+    <p>
+        <button class="btn btn-danger btn-block" type="submit">verileri  Getir</button>
+</p>
+
+</form>
+
+@{
+    var time = Request["tarih"];
+    string sayfa = "";
+
+
+
+    if (IsPost)
+    {
+        if (time!="")
+        {
+            DateTime txttime = DateTime.Parse(time);
+
+            string zmn = txttime.ToString("d");
+            zmn = Request.QueryString["tarih"];
+            Response.Redirect("data.cshtml");
+            TempData["zaman"] = zmn;
+        }
+    }
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

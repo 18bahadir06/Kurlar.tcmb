@@ -1,0 +1,63 @@
+﻿body {
+    background-color:azure;   /*arka plan rengi*/
+}
+
+.icerik { /*yukardaki yeşil panel*/
+    height: 130px;
+    width: 60%;
+    border-radius: 15px;
+    padding-left: 65px;
+    padding-top: 8px;
+    padding-bottom: 58px;
+    margin-left:470px;    /*sola konum*/
+    margin-top:60px;      /*yükseklik konumu*/
+    top: 30px;
+    right: 50px;
+}
+
+.icerik h2 { /*Gösterge Niteliğindeki Merkez Bankası Kurları*/
+    font-size: 38px;    
+    line-height: 48px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    font-size: large;
+    margin: 0.67em 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.icerik h3 {
+        letter-spacing: 1px; /* harfler arası boşluk */
+        line-height: 0px;
+        font-weight: 100;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+div.veri{
+    color:chocolate;
+}
+
+
+.form1{
+    color:black;
+    background-size:1000px;
+}
+
+
+.styled {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+input{
+    background-color: burlywood;
+}
+
+
+

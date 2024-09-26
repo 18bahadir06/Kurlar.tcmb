@@ -1,0 +1,83 @@
+﻿@using tcmb.Models;
+@using tcmb.Controllers;
+@using System.Web.UI.WebControls;
+@model List<tcmb.Models.Kurlar>
+
+@{
+    var a = TempData["veri"];
+    DateTime b = DateTime.Parse(a.ToString());
+    <p>@b.ToString("D")</p>
+
+
+
+
+
+    if (ViewBag.mesaj == null)
+    {
+
+        <table class="table table-bordered">
+            <tr>
+
+                <th>Birim</th>
+                <th>döviz cins</th>
+                <th>döviz alış</th>
+                <th>döviz satış</th>
+                <th>efektif satış</th>
+                <th>efektif alış</th>
+                <th>tarih</th>
+            </tr>
+            <tbody>
+                 
+                @{ foreach (var ktg in Model)
+                    {
+                        <tr>
+                            <td>
+                                @ktg.Birim
+                            </td>
+                            <td>
+                                @ktg.Dovizcins
+                            </td>
+                            <td>
+                                @ktg.Dovizalis
+                            </td>
+                            <td>
+                                @ktg.Dovizsatis
+                            </td>
+                            <td>
+                                @ktg.Efektifalis
+                            </td>
+                            <td>
+                                @ktg.Efektifsatis
+                            </td>
+                            <td>
+                                @b.ToString("D")
+                            </td>
+
+
+
+                        </tr>
+                        }
+                    }
+            </tbody>
+        </table>
+    }
+                    else
+                    
+                    {
+                
+                        <h1>@ViewBag.mesaj</h1>
+                        
+                    
+                        }
+                    }
+
+
+
+
+
+
+    <p>
+        <td>
+            <a href="/Home/Index" class="btn btn-default">Geri dön</a>
+        </td>
+    </p>
